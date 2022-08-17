@@ -24,3 +24,28 @@ a {
 li {
   list-style-type: none;
 }
+
+
+.main-container {
+  max-width: 1240px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 114px 0;
+}
+
+.subtitle {
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.cta-button {
+  font-weight: 700;
+  background: linear-gradient(to right, #43CEA2, #38B19F, #3196b3);
+  color: #F2F2F2;;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  display: inline-block;
+  transition: transform 0.2s;
+}
