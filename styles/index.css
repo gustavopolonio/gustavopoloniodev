@@ -5,15 +5,15 @@ header {
   left: 0;
   right: 0;
   z-index: 2;
-  /* background: white; */
-  backdrop-filter: saturate(180%) blur(20px);
+  background: white;
+  /* backdrop-filter: saturate(180%) blur(20px); */
 }
 
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 48px;
+  padding: 14px 48px;
 }
 
 .header-logo-container {
@@ -121,7 +121,7 @@ header {
 .home-hero {
   background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url("/assets/hero-bg.svg");
   height: calc(100vh - 76px);
-  margin-top:76px;
+  margin-top: 76px;
   background-position: center;
 }
 
@@ -359,12 +359,12 @@ header {
 }
 
 .project-links {
-  margin-top: 16px;
+  margin: 16px 0;
   border: 1px solid #C5CFDC;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  height: 34px;
+  height: 40px;
 }
 
 .view-site-button {
@@ -372,7 +372,7 @@ header {
   justify-content: center;
   flex: 1;
   font-weight: 700;
-  line-height: 34px;
+  line-height: 40px;
   border-radius: 4px;
 
   transition: 0.2s;
@@ -387,7 +387,7 @@ header {
   display: flex;
   padding: 0 4px;
   border-left: 1px solid #C5CFDC;
-  height: 34px;
+  height: 40px;
   transition: 0.2s;
 }
 
@@ -402,4 +402,128 @@ header {
 }
 .project-links a:last-of-type:hover .github-icon {
   fill: white;
+}
+
+.technologies-container {
+  padding: 12px 6px;
+  background: rgba(153,153,153,.2);
+  border: 1px solid #C5CFDC;
+  border-radius: 4px;
+}
+
+
+.contact {
+  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url("/assets/hero-bg.svg");
+  background-position: center;
+}
+
+.contact-form-container {
+  box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
+  background: #fff;
+  padding: 38px;
+  border-radius: 4px;
+  max-width: 800px;
+  margin: 48px auto 0;
+}
+
+.contact-form-field {
+  margin-bottom: 36px;
+}
+
+.contact-form-label {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-form-input {
+  padding: 16px;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-button {
+  padding: 16px 46px;
+  border: 0;
+  margin-left: auto;
+  display: flex;
+}
+
+
+footer {
+  /* background: #000; */
+  background-color: #262626;
+  color: #fff
+}
+
+.footer-container {
+  padding-bottom: 0;
+}
+
+.footer-upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+
+.personal-info {
+  width: 40%;
+}
+
+.personal-info p {
+  color: #eee;
+  line-height: 22px;
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-container a {
+  display: flex;
+}
+
+.social-container a+a {
+  margin-left: 12px;
+}
+
+.social-container img {
+  width: 24px;
+  height: auto;
+}
+
+.footer-lower {
+  border-top: 1px solid #444;
+  color: #eee;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-lower span {
+  font-size: 14px;
+}
+
+.footer-lower span b {
+  text-decoration: underline;
+}
+
+
+.title-footer {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: block;
 }
