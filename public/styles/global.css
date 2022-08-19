@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #333;
 }
@@ -25,6 +29,10 @@ li {
   list-style-type: none;
 }
 
+.hide {
+  opacity: 0;
+  transition: 0.2s;
+}
 
 .main-container {
   max-width: 1240px;
@@ -41,11 +49,33 @@ li {
 .cta-button {
   font-weight: 700;
   background: linear-gradient(to right, #43CEA2, #38B19F, #3196b3);
-  color: #F2F2F2;;
+  color: #F2F2F2;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 4px;
   box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
   display: inline-block;
-  transition: transform 0.2s;
+
+  position: relative;
+}
+
+.cta-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.cta-button:hover:after {
+  width: 120%;
+  background-color: rgba(255,255,255,0);
+	-webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }

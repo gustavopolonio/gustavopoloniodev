@@ -50,6 +50,12 @@ header {
   color: #43CEA2;
 }
 
+.menu-hamb-icon,
+.close-menu-hamb {
+  display: none;
+  font-size: 32px;
+}
+
 .header-navigation-items {
   display: flex;
   align-items: center;
@@ -132,7 +138,7 @@ header {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 90%;
-  max-width: 800px;
+  max-width: 790px;
 }
 
 .heading-primary {
@@ -153,10 +159,6 @@ header {
 .home-hero-cta {
   padding: 16px 74px;
   font-size: 20px;
-}
-
-.home-hero-cta:hover {
-  transform: translateY(-6px);
 }
 
 .home-hero-socials {
@@ -303,10 +305,6 @@ header {
   padding: 14px 48px;
 }
 
-.description-cta:hover {
-  transform: translateY(-6px);
-}
-
 .skills-content {
   display: flex;
   flex-wrap: wrap;
@@ -389,6 +387,7 @@ header {
   border-left: 1px solid #C5CFDC;
   height: 40px;
   transition: 0.2s;
+  border-radius: 0 4px 4px 0;
 }
 
 .github-icon {
@@ -477,7 +476,7 @@ footer {
 }
 
 .personal-info {
-  width: 40%;
+  width: 54%;
 }
 
 .personal-info p {
@@ -526,4 +525,210 @@ footer {
   letter-spacing: 1px;
   margin-bottom: 16px;
   display: block;
+}
+
+
+.back-to-top-button {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 980px) {
+  .header-content {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .header-navigation-items > li a {
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 14px;
+  }
+
+  .language-container {
+    margin-left: 16px;
+  }
+
+  .languages-available-container {
+    right: -4px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .heading-primary {
+    line-height: 74px;  
+  }
+
+  .home-hero-socials {
+    display: none;
+  }
+
+  .body-container,
+  .projects-content {
+    grid-template-columns: 1fr;
+  }
+
+  .view-site-button {
+    background: rgb(56, 177, 159);
+    color: rgb(242, 242, 242);
+    border-radius: 4px 0 0 4px;
+  }
+
+  .project-links a:last-of-type {
+    background: black;
+    border-left: none;
+  }
+  .github-icon {
+    fill: white;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .menu-hamb-icon {
+    display: block;
+  }
+  .menu-hamb-icon.d-none {
+    display: none;
+  }
+  .close-menu-hamb.d-block {
+    display: block;
+  }
+
+  .header-navigation-items {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background: #fff;
+    align-items: end;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 5px 5px 0 rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,.1);
+
+    transition: 0.2s;
+  }
+  .header-navigation-items.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header-navigation-items > li {
+    width: 100%;
+    text-align: end;
+    border-top: 1px solid #eee;
+  }
+
+  .header-navigation-items > li a {
+    display: block;
+    width: 100%;
+    padding: 25px 22px;
+  }
+
+  .language-container {
+    padding: 22px;
+    border-top: 1px solid #eee;
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+
+  .heading-primary {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading-primary {
+    font-size: 40px;
+    line-height: 58px;
+  }
+
+  .text-primary {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .main-container {
+    padding: 71px 0;
+  }
+
+  .heading-container > h2 {
+    font-size: 35px;
+    margin-bottom: 32px;
+  }
+  .heading-container > h2:after {
+    top: 118%;
+  }
+
+  .heading-container > span {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .body-container {
+    margin-top: 71px;
+    gap: 71px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .description-cta,
+  .form-button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .projects-content {
+    margin-top: 71px;
+  }
+
+  .project-description {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 12px 0;
+  }
+
+  .footer-container {
+    padding-top: 52px;
+    padding-bottom: 0;
+  }
+
+  .footer-upper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .personal-info {
+    width: 100%;
+    margin-bottom: 44px;
+  }
+
+  .personal-info p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .social-container img {
+    width: 26px;
+  }
+
+  .social-container a+a {
+    margin-left: 18px;
+  }
 }

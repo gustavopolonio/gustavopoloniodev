@@ -49,6 +49,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html")
 });
 
+app.get("/pt-br", (req, res) => {
+  res.sendFile(__dirname + "/public/pt-br.html")
+})
+
 app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
   
@@ -62,4 +66,4 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Server is running!"));
+app.listen(process.env.PORT || 3000, () => console.log("Server is running!"));
