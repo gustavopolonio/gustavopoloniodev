@@ -350,6 +350,7 @@ header {
 .project-image {
   max-width: 100%;
   transition: 0.3s;
+  box-shadow: 0 6px 10px rgb(0 0 0 / 36%);
 }
 
 .project-image:hover {
@@ -532,11 +533,31 @@ footer {
   position: fixed;
   bottom: 16px;
   right: 24px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.overlay-container {
+  opacity: 0;
+  visibility: hidden;
+  
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  transition: 0.2s;
+}
+.overlay-container.active {
+  opacity: 1;
+  visibility: visible;
+
+  transition: 0.2s;
 }
 
 
@@ -648,6 +669,11 @@ footer {
   .heading-primary {
     font-size: 52px;
   }
+
+  .back-to-top-button {
+    right: 18px;
+    bottom: 18px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -689,7 +715,7 @@ footer {
 
   .description-cta,
   .form-button {
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     justify-content: center;
   }
