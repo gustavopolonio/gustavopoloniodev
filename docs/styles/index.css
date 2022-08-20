@@ -294,6 +294,10 @@ header {
   line-height: 29px;
 }
 
+.description-content > p a.highlighted {
+  color: #43CEA2;
+}
+
 .description-content > p+p {
   margin-top: 9px;
 }
@@ -345,6 +349,8 @@ header {
   color: #666;
   line-height: 28px;
   margin: 16px 0;
+
+  min-height: 84px;
 }
 
 .project-image {
@@ -563,6 +569,12 @@ footer {
 
 /* Responsive */
 
+@media screen and (max-width: 1080px) {
+  .project-description {
+    min-height: 112px;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .header-content {
     padding-left: 18px;
@@ -596,6 +608,10 @@ footer {
   .body-container,
   .projects-content {
     grid-template-columns: 1fr;
+  }
+
+  .project-description {
+    min-height: unset;
   }
 
   .view-site-button {

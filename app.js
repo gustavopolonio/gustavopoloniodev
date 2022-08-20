@@ -59,7 +59,20 @@ app.post("/contact", async (req, res) => {
   try {
     await mainMail(name, email, message);
     
-    res.sendFile(__dirname + "/docs/contact.html")
+    res.sendFile(__dirname + "/docs/contact/index.html")
+  } catch (error) {
+    console.log(error)
+    res.send("Message Could not be Sent");
+  }
+});
+
+app.post("/contact/pt-br", async (req, res) => {
+  const { name, email, message } = req.body;
+  
+  try {
+    await mainMail(name, email, message);
+    
+    res.sendFile(__dirname + "/docs/contact/pt-br.html")
   } catch (error) {
     console.log(error)
     res.send("Message Could not be Sent");

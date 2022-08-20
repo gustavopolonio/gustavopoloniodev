@@ -32,3 +32,18 @@
   margin-right: 4px;
   font-size: 18px;
 }
+
+
+/* Responsive */
+
+@media screen and (max-width: 540px) {
+  .content {
+    width: 90%;
+    padding: 36px 22px;
+  }
+
+  .content > span {
+    line-height: 22px;
+    margin: 14px 0px 20px;
+  }
+}
