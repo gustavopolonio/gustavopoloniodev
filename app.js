@@ -5,7 +5,7 @@ const path = require("path")
 
 const app = express()
 
-app.use(express.urlencoded({ extend: true }))
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, "docs")))
 
 
@@ -55,7 +55,7 @@ app.get("/pt-br", (req, res) => {
 
 app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
-  
+
   try {
     await mainMail(name, email, message);
     
