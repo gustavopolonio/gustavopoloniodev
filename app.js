@@ -6,7 +6,7 @@ const path = require("path")
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname)))
+app.use(express.static(path.join(__dirname + "/public")))
 
 
 async function mainMail(name, email, message) {
@@ -46,11 +46,11 @@ async function mainMail(name, email, message) {
 }
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html")
+  res.sendFile(__dirname + "/views/index.html")
 });
 
 app.get("/pt-br", (req, res) => {
-  res.sendFile(__dirname + "/public/pt-br.html")
+  res.sendFile(__dirname + "/views/pt-br.html")
 })
 
 app.post("/contact", async (req, res) => {
@@ -59,7 +59,7 @@ app.post("/contact", async (req, res) => {
   try {
     await mainMail(name, email, message);
     
-    res.sendFile(__dirname + "/public/contact/index.html")
+    res.sendFile(__dirname + "/views/contact/index.html")
   } catch (error) {
     console.log(error)
     res.send("Message Could not be Sent");
@@ -72,7 +72,7 @@ app.post("/contact/pt-br", async (req, res) => {
   try {
     await mainMail(name, email, message);
     
-    res.sendFile(__dirname + "/public/contact/pt-br.html")
+    res.sendFile(__dirname + "/views/contact/pt-br.html")
   } catch (error) {
     console.log(error)
     res.send("Message Could not be Sent");
