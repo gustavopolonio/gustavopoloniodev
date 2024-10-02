@@ -340,8 +340,14 @@ header {
 }
 
 .project-item {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   text-align: center;
+}
+
+.project-image-container {
+  margin-bottom: auto;
 }
 
 .project-description {
@@ -383,7 +389,12 @@ header {
   transition: 0.2s;
 }
 
-.view-site-button:hover {
+.view-site-button.under-dev {
+  cursor: not-allowed;
+  background-color: rgba(153,153,153,.2);
+}
+
+.view-site-button:not(.under-dev):hover {
   background: rgb(56, 177, 159);
   color: rgb(242, 242, 242);
 }
