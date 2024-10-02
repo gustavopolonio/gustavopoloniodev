@@ -384,7 +384,7 @@ header {
   flex: 1;
   font-weight: 700;
   line-height: 40px;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 
   transition: 0.2s;
 }
@@ -625,10 +625,9 @@ footer {
     min-height: unset;
   }
 
-  .view-site-button {
+  .view-site-button:not(.under-dev) {
     background: rgb(56, 177, 159);
     color: rgb(242, 242, 242);
-    border-radius: 4px 0 0 4px;
   }
 
   .project-links a:last-of-type {
