@@ -151,7 +151,7 @@ header {
 }
 
 .text-primary {
-  margin: 28px 0 48px;
+  margin: 28px 0 24px;
   font-size: 20px;
   line-height: 33px;
 }
@@ -159,6 +159,21 @@ header {
 .home-hero-cta {
   padding: 16px 74px;
   font-size: 20px;
+}
+
+.resume-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  text-decoration: underline;
+  color: #38B19F;
+}
+
+.resume-button:hover {
+  color: #3196b3;
 }
 
 .home-hero-socials {
